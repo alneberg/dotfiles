@@ -19,6 +19,3 @@ export DRMAA_PATH=$DRMAA_LIBRARY_PATH
 
 # added by Miniconda 3.3.0 installer
 export PATH="/home/alneberg/miniconda/bin:$PATH"
-
-# Set the correct umask with rwxrwx---
-umask 0770
