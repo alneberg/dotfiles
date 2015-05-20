@@ -1,0 +1,35 @@
+# .bash_profile, Uppmax user login script
+
+# modules are used to manage user environment and software packages
+if [ -f /etc/profile.modules ]
+then
+	. /etc/profile.modules
+# load a default environment
+#	module load sge 
+# PGI compilers
+#	module load pgi 
+fi
+
+# User specific environment and startup programs
+export PATH=$HOME/bin:$PATH
+
+# Project specific bin
+export PATH=/proj/b2010008/bin:$PATH
+
+# Load .bashrc as well:
+if [ -f ~/.bashrc ]
+then 
+    . ~/.bashrc
+fi
+
+# Perl shit
+eval PATH="/proj/b2010008/lib/perl/bin${PATH+:}$PATH";
+export PATH;
+PERL5LIB="/proj/b2010008/lib/perl/lib/perl5${PERL5LIB+:}$PERL5LIB";
+export PERL5LIB;
+PERL_LOCAL_LIB_ROOT="/proj/b2010008/lib/perl${PERL_LOCAL_LIB_ROOT+:}$PERL_LOCAL_LIB_ROOT";
+export PERL_LOCAL_LIB_ROOT;
+PERL_MB_OPT="--install_base \"/proj/b2010008/lib/perl\"";
+export PERL_MB_OPT;
+PERL_MM_OPT="INSTALL_BASE=/proj/b2010008/lib/perl";
+export PERL_MM_OPT;

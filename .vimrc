@@ -20,3 +20,5 @@ set tabstop=4
 
 " Enable python highlighing in Snakefiles "
 au BufNewFile,BufRead Snakefile set syntax=python
+au BufNewFile,BufRead *.snake set syntax=python
+au BufNewFile,BufRead *.rules set syntax=python
