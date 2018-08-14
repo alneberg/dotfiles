@@ -14,8 +14,5 @@ if [ -f /etc/bashrc ]; then
 	. /etc/bashrc
 fi
 
-export DRMAA_LIBRARY_PATH=/sw/apps/build/slurm-drmaa/1.0.6/lib/libdrmaa.so
-export DRMAA_PATH=$DRMAA_LIBRARY_PATH
-
-# added by Miniconda 3.3.0 installer
-export PATH="/home/alneberg/miniconda/bin:$PATH"
+# added by Miniconda installer
+export PATH="/proj/sllstore2017079/private/johannes/src/miniconda/bin:$PATH"

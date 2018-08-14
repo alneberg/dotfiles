@@ -4,17 +4,13 @@
 if [ -f /etc/profile.modules ]
 then
 	. /etc/profile.modules
-# load a default environment
-#	module load sge 
-# PGI compilers
-#	module load pgi 
 fi
 
 # User specific environment and startup programs
 export PATH=$HOME/bin:$PATH
 
 # Project specific bin
-export PATH=/proj/b2010008/bin:$PATH
+export PATH=/proj/sllstore2017079/private/johannes/bin:$PATH
 
 # Load .bashrc as well:
 if [ -f ~/.bashrc ]
@@ -23,13 +19,13 @@ then
 fi
 
 # Perl shit
-eval PATH="/proj/b2010008/lib/perl/bin${PATH+:}$PATH";
+eval PATH="/proj/uppstore2017124/lib/perl/bin${PATH+:}$PATH";
 export PATH;
-PERL5LIB="/proj/b2010008/lib/perl/lib/perl5${PERL5LIB+:}$PERL5LIB";
+PERL5LIB="/proj/uppstore2017124/lib/perl/lib/perl5${PERL5LIB+:}$PERL5LIB";
 export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/proj/b2010008/lib/perl${PERL_LOCAL_LIB_ROOT+:}$PERL_LOCAL_LIB_ROOT";
+PERL_LOCAL_LIB_ROOT="/proj/uppstore2017124/lib/perl${PERL_LOCAL_LIB_ROOT+:}$PERL_LOCAL_LIB_ROOT";
 export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/proj/b2010008/lib/perl\"";
+PERL_MB_OPT="--install_base \"/proj/uppstore2017124/lib/perl\"";
 export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/proj/b2010008/lib/perl";
+PERL_MM_OPT="INSTALL_BASE=/proj/uppstore2017124/lib/perl";
 export PERL_MM_OPT;
